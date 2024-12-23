@@ -14,22 +14,13 @@
     </div>
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            count: 0
-        }
-    },
-    methods: {
-        increment() {
-            this.count++
-        },
-        decrement() {
-            this.count--
-        }
-    }
-}
+
+<script setup>
+    import { ref } from 'vue';
+    
+    const count = ref(0);
+    const increment = () => count.value++;
+    const decrement = () => count.value--;
 </script>
 
 <style scoped lang="scss">
